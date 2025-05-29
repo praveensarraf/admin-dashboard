@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { USER_API_ENDPOINT } from "../../utils/constant";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -104,6 +104,15 @@ export default function Login() {
               )}
             </Button>
           </form>
+          <div className='mt-5 flex flex-col sm:flex-row justify-center items-center sm:gap-1 text-sm text-muted-foreground'>
+            <p>Don't have an account?</p>
+            <Link
+              to="/signup"
+              className='text-gray-300 font-semibold hover:text-gray-100 hover:underline'
+            >
+              Sign Up
+            </Link>
+          </div>
         </CardContent>
       </Card>
     </div>
