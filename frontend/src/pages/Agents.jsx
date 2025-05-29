@@ -156,7 +156,7 @@ export default function Agents() {
         {loading ? (
           <div className="flex flex-col items-center justify-center gap-2 p-10 text-white">
             <Loader2 className="h-6 w-6 animate-spin text-gray-200" />
-            <p className="text-gray-200">Loading tasks...</p>
+            <p className="text-gray-200">Loading...</p>
           </div>
         ) : agents.length === 0 ? (
           <p className="text-white">No agents found.</p>
