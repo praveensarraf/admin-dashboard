@@ -1,13 +1,13 @@
-# 🧠 Agent Task Manager System
+# 🧠 Admin Dashboard
 
-A professional **MERN Stack** web application that allows an admin to:
+A professional **MERN Stack** web application designed for efficient task distribution and management by an admin. The system allows:
 
-- Create/manage agents
-- Upload CSV files containing tasks
-- Auto-distribute tasks to agents
-- View all tasks grouped by agents
-- Securely login/logout with persistent authentication
-- Responsive and user-friendly UI built with **React + ShadCN UI + Tailwind CSS**
+- Secure authentication and access control
+- Agent creation and management
+- Task file upload via CSV
+- Auto-distribution of tasks among agents
+- Organized task viewing grouped by agent
+- Clean, responsive, and modern UI built using **React, Tailwind CSS, and ShadCN/UI**
 
 ---
 
@@ -20,35 +20,40 @@ A professional **MERN Stack** web application that allows an admin to:
 ## 🚀 Features
 
 ### ✅ Authentication
-- Admin login and signup
-- Session persistence using cookies (JWT-based)
-- Protected dashboard routes
+- Admin login & signup with email and password
+- JWT-based authentication using secure HTTP-only cookies
+- Session persistence (auto-login on refresh)
+- Protected routes for the dashboard
 
 ### 👨‍💼 Agent Management
-- Add new agents (name, email, mobile, password)
-- View and delete existing agents
+- Create agents with name, email, mobile, and password
+- View a list of all agents
+- Delete agents from the system
 
 ### 📁 Task Upload and Distribution
-- Upload `.csv` files containing task data
-- Automatically distribute tasks evenly among agents
-- Store tasks in the database with agent references
+- Upload `.csv`, `.xlsx`, or `.xls` files containing tasks
+- Auto-distribute tasks equally among all agents
+- Store each task in MongoDB with reference to its assigned agent
 
-### 📋 Tasks By Agent
-- View all assigned tasks grouped by each agent
-- Display task details: name, phone, and notes
+### 📋 Tasks Overview
+- View all tasks grouped under their respective agents
+- Displays task details such as name, phone, and notes
+- Handles unknown/missing agent associations gracefully
 
 ### 💻 Frontend
 - Built using **React + Vite**
-- Modern UI with **ShadCN/UI** and **Tailwind CSS**
-- Axios for API communication
-- Toast notifications via `sonner`
-- Redux + Redux-Persist for state management
+- Styled with **Tailwind CSS** and **ShadCN/UI**
+- Axios used for secure API communication
+- Toast notifications with **sonner**
+- State management using **Redux Toolkit** and **Redux Persist**
+- Environment variables managed using `.env` (via Netlify)
 
 ### 🧰 Backend
-- Built using **Node.js + Express.js**
-- MongoDB with Mongoose for data storage
-- Multer for file uploads
-- JWT-based authentication with secure cookies
+- Built with **Node.js** and **Express.js**
+- MongoDB used as database (hosted on MongoDB Atlas)
+- File uploads handled with **Multer**
+- JWT authentication with secure cookie handling
+- Modular controller, route, and middleware structure
 
 ---
 
@@ -58,13 +63,50 @@ A professional **MERN Stack** web application that allows an admin to:
 |----------------|-----------------|----------|
 | React + Vite   | Express.js      | MongoDB  |
 | Tailwind CSS   | Node.js         | Mongoose |
-| Redux Toolkit  | JWT Auth        |          |
+| Redux Toolkit  | JWT + Cookies   |          |
 
 ---
 
-### Deployment
-- **Frontend**: Hosted on Netlify.
-- **Backend**: Hosted on Render with MongoDB Atlas for database management.
+## 🛠 Deployment
+
+- **Frontend**: [Netlify](https://www.netlify.com/)
+- **Backend**: [Render](https://render.com/)
+- **Database**: [MongoDB Atlas](https://www.mongodb.com/atlas/database)
+
+---
+
+## 📁 Folder Structure Overview
+
+```bash
+📦 backend
+ ┣ 📂controllers
+ ┣ 📂db
+ ┣ 📂middlewares
+ ┣ 📂models
+ ┣ 📂routes
+ ┣ 📂utils
+ ┣ 📜.env
+ ┣ 📜server.js
+📦 frontend
+ ┣ 📂src
+ ┃ ┣ 📂components
+ ┃ ┣ 📂pages
+ ┃ ┣ 📂redux
+ ┃ ┣ 📜App.jsx
+ ┃ ┣ 📜main.jsx
+ ┣ 📂utils
+ ┣ 📜.env
+ ```
+
+
+ ## 🧪 Local Setup
+
+### 🔁 Clone the Repository
+
+```bash
+git clone https://github.com/praveensarraf/admin-dashboard.git
+cd admin-dashboard
+```
 
 ---
 
